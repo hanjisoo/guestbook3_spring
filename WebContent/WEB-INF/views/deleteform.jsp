@@ -9,7 +9,7 @@
 </head>
 <body>
 	<form method="get" action="/g3/delete">
-	<input type='text' name="no" value="${param.no }">
+	<input type='text' name="no" value="${num }"> <%-- 변수안쓸때는 ${param.no}으로 썼음 --%>
 		<!--hidden으로 숨겨줌 숫자보여주고 우리눈에 -->
 	<!-- <input type="text" name="a" value="delete"> -->
 		<!-- 리스트에 리퉤스트에 담아진 a의 delete로 가 -->

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.guestbook.dao.GuestbookDao;
@@ -43,9 +44,10 @@ public class GuestbookController {
 		return"redirect:/list";
 	}
 	
-	@RequestMapping("/deleteform")
-	public String deleteform() {
+	@RequestMapping(value="/deleteform/{no}")
+	public String deleteform(Model model,@PathVariable("no") int no) {
 		System.out.println("이히");
-		return"deleteform";
+		model.addAttribute("num", no);
+		return "deleteform";
 	}
 }

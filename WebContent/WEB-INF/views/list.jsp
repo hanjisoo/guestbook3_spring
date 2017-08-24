@@ -34,8 +34,8 @@
 				<td>${vo.no}</td>
 				<td>${vo.name }</td>
 				<td>${vo.regDate }</td>
-				<td><a href="deleteform?no=${vo.no}">삭제</a></td>
-			</tr>               <!-- 삭제누르면 해당 번호가 삭제되야하고 그 번호 페이지로 연결되야지 -->
+				<td><a href="deleteform/${vo.no}">삭제</a></td>
+			</tr>      <%--원래는 "deleteform?no=${vo.no}" 씀--%>
 			<tr>
 				<td colspan=4>안녕하세요~<br/>${fn:replace(vo.content,n,'<br/>')}</td>
 															
